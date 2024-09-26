@@ -1,0 +1,9 @@
+.hero {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero video {
+  margin-top: 10px;
+  border: 2px solid #000;
+}

@@ -1,0 +1,134 @@
+/* Default styles for desktop */
+.video-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-background .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.video-background .content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.video-background form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.video-background form input {
+  padding: 10px 10px 10px 20px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(255, 235, 193);
+  border-radius: 35px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(248, 99, 0, 1),
+              0 0 20px rgba(248, 99, 0, 0.8),
+              0 0 30px rgba(248, 99, 0, 0.6);
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: white;
+  text-shadow: 0 0 5px rgba(245, 245, 245, 0.7);
+  width: 70%;
+  height: 50px;
+}
+
+.video-background form input::placeholder {
+  color: white;
+  font-size: 1em;
+}
+
+.video-background form input.ng-invalid.ng-touched {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 1),
+              0 0 20px rgba(255, 0, 0, 0.8),
+              0 0 30px rgba(255, 0, 0, 0.6);
+}
+
+.video-background form input.ng-valid.ng-touched {
+  border-color: #4caf50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 1),
+              0 0 20px rgba(76, 175, 80, 0.8),
+              0 0 30px rgba(76, 175, 80, 0.6);
+}
+.video-background form button {
+  display: none;
+}
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .video-background .content {
+    width: 70%;
+    height: 100%;
+  }
+
+  .video-background .content h1 {
+    font-size: 1.5em;
+  }
+
+  .video-background form input {
+    width: 90%;
+    font-size: 20px;
+  }
+}
+
+/* Phone styles */
+@media (max-width: 480px) {
+  .video-background .content {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .video-background .content h1 {
+    font-size: 1.2em;
+  }
+
+  .video-background form {
+    max-width: 100%;
+  }
+
+  .video-background form input {
+    width: 100%;
+    font-size: 18px;
+    height: 40px;
+  }
+
+  .video-background form input::placeholder {
+    font-size: 0.9em;
+  }
+}

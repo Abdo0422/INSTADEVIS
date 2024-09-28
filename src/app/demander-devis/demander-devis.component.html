@@ -1,0 +1,20 @@
+<div class="video-background">
+  <video autoplay [muted]="'muted'" loop>
+    <source [src]="'assets/video6.mp4'" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <a href="/" class="title-link"><h1>INSTADEVIS</h1></a>
+    <p>Simplifier votre travail <br> avec notre solutionde devis par <br> vidéo.Rapide, précis et détaillé</p>
+    <div class="button-group">
+      <div class="left-buttons">
+        <button (click)="selectDevis('particulier')">Particulier</button>
+        <button (click)="selectDevis('autoentrepreneur')">Autoentrepreneur/<br>Indépendant</button>
+        <button (click)="selectDevis('entreprise')">Entreprise</button>
+      </div>
+      <div class="right-button">
+        <button routerLink="/inscrire">S'inscrire en tant que<br> professionnel</button>
+      </div>
+    </div>
+  </div>
+</div>

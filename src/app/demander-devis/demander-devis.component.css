@@ -1,0 +1,191 @@
+.video-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-background .content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: left;
+}
+
+.title-link {
+  text-decoration: none;
+}
+
+.title-link h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  color: #f1cd00;
+  text-shadow: 0 0 5px rgba(241, 205, 0, 0.7),
+    0 0 10px rgba(241, 205, 0, 0.5),
+    0 0 20px rgba(241, 205, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.title-link h1:hover {
+  text-shadow: 0 0 10px rgba(241, 205, 0, 1),
+    0 0 20px rgba(241, 205, 0, 0.8),
+    0 0 30px rgba(241, 205, 0, 0.6);
+}
+
+.video-background .content p {
+  font-family: "SUSE", sans-serif;
+  font-size: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.left-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.left-buttons button {
+  padding: 12px 24px;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: rgb(245, 245, 245);
+  border: 3px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.left-buttons button:hover {
+  border-color: rgb(255, 235, 193);
+  text-shadow: 0 0 5px rgba(245, 245, 245, 0.7),
+    0 0 10px rgba(245, 245, 245, 0.5),
+    0 0 20px rgba(245, 245, 245, 0.3);
+  box-shadow: 0 0 10px rgba(248, 99, 0, 1),
+    0 0 20px rgba(248, 99, 0, 0.8),
+    0 0 30px rgba(248, 99, 0, 0.6);
+}
+
+.right-button {
+  margin-left: auto;
+}
+
+.right-button button {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.right-button button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button-group button:focus {
+  outline: none;
+}
+
+/* Responsive Styles */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .video-background .content {
+    width: 90%;
+  }
+
+  .title-link h1 {
+    font-size: 2.5rem;
+  }
+
+  .video-background .content p {
+    font-size: 1.25rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-buttons {
+    gap: 10px;
+  }
+
+  .left-buttons button {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .right-button button {
+    font-size: 20px;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  .video-background .content {
+    width: 95%;
+  }
+
+  .title-link h1 {
+    font-size: 1.75rem;
+  }
+
+  .video-background .content p {
+    font-size: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left-buttons {
+    gap: 10px;
+  }
+
+  .left-buttons button {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  .right-button button {
+    font-size: 18px;
+  }
+}

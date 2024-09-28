@@ -1,0 +1,35 @@
+<div class="video-background">
+  <video autoplay [muted]="'muted'" loop>
+    <source [src]="'/assets/video7.mp4'" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <input id="nom" name="nom" type="text" placeholder="Nom et Prénom" ngModel required #nom="ngModel">
+      <div *ngIf="nom.invalid && nom.touched" class="error-message">
+        Les nom et prénom sont requis.
+      </div>
+
+      <input id="metier" name="metier" type="text" placeholder="Métier" ngModel required #metier="ngModel">
+      <div *ngIf="metier.invalid && metier.touched" class="error-message">
+        Le métier est requis.
+      </div>
+
+      <input id="kbis" name="kbis" type="text" placeholder="KBIS" ngModel required #kbis="ngModel">
+      <div *ngIf="kbis.invalid && kbis.touched" class="error-message">
+        Le KBIS est requis.
+      </div>
+
+      <input id="mobile" name="mobile" type="tel" placeholder="Mobile" ngModel required pattern="[0-9]{10}" #mobile="ngModel">
+      <div *ngIf="mobile.invalid && mobile.touched" class="error-message">
+        Le numéro de mobile doit contenir 10 chiffres.
+      </div>
+
+      <input id="email" name="email" type="email" placeholder="Email" ngModel required email #email="ngModel">
+      <div *ngIf="email.invalid && email.touched" class="error-message">
+        Veuillez entrer une adresse email valide.
+      </div>
+      <button type="submit" [disabled]="form.invalid">Valider</button>
+    </form>
+  </div>
+</div>

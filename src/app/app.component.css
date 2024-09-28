@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=SUSE:wght@100..800&display=swap');
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+router-outlet {
+  display: block;
+  height: 100%;
+}
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+
